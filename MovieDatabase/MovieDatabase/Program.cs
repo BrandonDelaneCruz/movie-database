@@ -1,2 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using MovieDatabase.Data;
+using MovieDatabase.Menus;
+
+using DataContext _context = new DataContext();    
+MovieMenu movieMenu = new MovieMenu(_context);
+
+movieMenu.UserAddMovie();
